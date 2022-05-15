@@ -217,7 +217,7 @@ let stem in_word =
         aux_word
   in
   (* This is a really stupid hack. Why do I need it? *)
-  if 0 = String.compare "'s" (String.sub word (-2) 2) then word
+  if 0 = String.compare "'s" (String.sub word 0 2) then word
   else aux word all_rules
 
 let stem_cmp s1 s2 = stem s1 = stem s2
